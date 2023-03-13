@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(40, 42, 54);
+      }
+      iframe {
+        border: none;
+        width: 1257px;
+        height: 910px;
+        overflow: hidden;
+        margin-top: 200px;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #1c1e26;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .download-btn {
+        border-radius: 3px;
+        border-color: aquamarine;
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <body>
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="#" class="active">Resume</a>
+      <a href="projectPage.html">Projects</a>
+      <div class="button-right">
+        <a href="../Resume.jpg" download class="download-btn"
+          >Download Resume</a
+        >
+        <a href="Contact.html">Contact Me</a>
+      </div>
+    </div>
+    <iframe src="../Resume.jpg" frameborder="0"></iframe>
+  </body>
+</html>

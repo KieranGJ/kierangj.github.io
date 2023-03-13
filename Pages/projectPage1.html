@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Grid</title>
+    <style>
+      body {
+        background-color: rgb(40, 42, 54);
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+        padding-left: 130px;
+        padding-bottom: 0px;
+        padding-top: 50px;
+        background-color: rgb(40, 42, 54);
+      }
+
+      .button {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 63%;
+        margin-bottom: 50px;
+        height: 0;
+        padding-bottom: 62%;
+        border-radius: 50%;
+        border: 5px solid white;
+        background-color: #f0f0f0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .button:hover img {
+        transform: translateY(-15%);
+        bottom: 15%;
+      }
+
+      .button img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-out;
+        bottom: 0;
+      }
+
+      .button .text {
+        position: absolute;
+        bottom: -120px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: #333333;
+        transition: bottom 0.3s ease-out;
+        line-height: 120px;
+        opacity: 1;
+      }
+
+      .button:hover .text {
+        bottom: 0;
+      }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: lightblue;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="#" class="active">Projects</a>
+      <div class="button-right">
+        <a href="Contact.html">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="button">
+        <p>
+          <a href="senimtentWithMlPage.html">
+            <img src="../Images/sentiment_ml_text2.jpg" alt="Button 1" />
+
+            <div class="text">View Project</div>
+          </a>
+        </p>
+      </div>
+      <div class="button">
+        <p>
+          <a href="heartAttackPage.html">
+            <img src="../Images/heartFailure.jpg" alt="Button 2" />
+
+            <div class="text">View Project</div>
+          </a>
+        </p>
+      </div>
+      <div class="button">
+        <p>
+          <a href="fraudDetectionPage.html">
+            <img src="../Images/FraudDetection.jpg" alt="Button 3" />
+
+            <div class="text">View Project</div>
+          </a>
+        </p>
+      </div>
+
+      <div class="button">
+        <p>
+          <a href="aslPage.html">
+            <img src="../Images/signLanguage.jpg" alt="Button 4" />
+            <div class="text">View Project</div>
+          </a>
+        </p>
+      </div>
+
+      <div class="button">
+        <p>
+          <a href="sentimentWithLSTM.html">
+            <img src="../Images/sentWithNeuralNet.jpg" alt="Button 5" />
+            <div class="text">View Project</div>
+          </a>
+        </p>
+      </div>
+
+      <div class="button">
+        <p>
+          <a href="https://github.com/rooT9nine" target="_blank">
+            <img src="../Images/githubLogo.jpg" alt="Button 6" />
+            <div class="text">View Project</div>
+          </a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
