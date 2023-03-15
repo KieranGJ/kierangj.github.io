@@ -18,6 +18,9 @@
       }
       h1 {
         text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        text-shadow:0 0 10px #ccc ;
       }
 
       form {
@@ -29,7 +32,7 @@
         box-shadow: 0 0 10px #ccc;
         padding-left: 30px;
         padding-right: 50px;
-        margin-top: 80px;
+        margin-top: 30px;
       }
 
       label {
@@ -64,27 +67,54 @@
       input[type="submit"]:hover {
         background-color: #3e8e41;
       }
-
-      .footer {
-        background-color: #282a36;
-        color: white;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      .bigContainerLeft {
+        width: 50%;
+        margin: 0 auto;
+        float: left;
       }
-
-      .footer-links a {
-        color: white;
+      .bigContainerRight {
+        width: 50%;
+        margin: 0 auto;
+        float: right;
+        align-content: center;
+        
+      }
+      /* Style the buttons */
+      .button {
+        display: block;
+        margin: 20px auto;
+        height: 50px;
+        padding: 20px 40px;
+        font-size: 24px;
+        text-align: center;
+        align-content: center;
         text-decoration: none;
-        margin-right: 20px;
+        background-color: #4CAF50;
+        color: #FFFFFF;
+        border-radius: 5px;
+        border: 30px;
+        border-color: #FFFFFF;
+        cursor: pointer;
+        box-shadow: 0 0 10px #ccc;
+        transition: background-color 0.3s;
+        background-color: rgb(40, 42, 54);
       }
 
-      .footer-links a:hover {
-        text-decoration: underline;
+      /* Style the hover effect */
+      .button:hover {
+        background-color: #3e8e41;
+      }
+
+      /* Center the buttons */
+      .button-container {
+        text-align: center;
+        margin-top: 200px;
+        margin-right: 40px;
+
       }
     </style>
     <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link rel="icon" href="../Images/webpageIcon.png" type="image/x-icon" />
   </head>
   <body>
     <div class="navbar">
@@ -95,35 +125,38 @@
         <a href="#" class="active">Contact Me</a>
       </div>
     </div>
-
-    <div class="container">
-      <form
-        action="mailto:kglezerjones@gmail.com"
-        method="post"
-        enctype="text/plain"
-      >
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="10"
-          cols="50"
-          required
-        ></textarea>
-        <input type="submit" value="Send" />
-      </form>
+    <div class="bigContainerLeft">
+      <div class="container">
+        <h1>Send Me an Email</h1>
+        <form
+          action="mailto:kglezerjones@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="10"
+            cols="50"
+            required
+          ></textarea>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
     </div>
 
-    <footer>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-URL/">LinkedIn</a>
-        <a href="https://github.com/YOUR-GITHUB-USERNAME">GitHub</a>
-        <a href="mailto:YOUR-EMAIL-ADDRESS">Email</a>
+    <div class="bigContainerRight">
+      <div class="container">
+        <div class="button-container">
+          <a href="https://www.google.com" class="button">Button 1</a>
+          <a href="https://www.facebook.com" class="button">Button 2</a>
+          <a href="https://www.twitter.com" class="button">Button 3</a>
+        </div>
       </div>
-    </footer>
   </body>
 </html>
