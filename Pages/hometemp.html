@@ -1,60 +1,129 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to My Website</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
+    <title>Contact Me</title>
     <style>
       body {
+        font-family: Arial, sans-serif;
         margin: 0;
-        font-family: "Montserrat", sans-serif;
+        padding: 0;
+        background-color: rgb(40, 42, 54);
+      }
+      .whiteDiv {
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+      }
+      h1 {
         text-align: center;
       }
 
-      h1 {
-        font-size: 4rem;
-        color: #333;
-        margin-top: 2rem;
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #ccc;
+        padding-left: 30px;
+        padding-right: 50px;
+        margin-top: 80px;
       }
 
-      .circle {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background-image: url("https://placekitten.com/600/600");
-        background-size: cover;
-        margin: 3rem auto;
+      label {
+        display: block;
+        margin-bottom: 10px;
+        padding-top: 20px;
+        color: white;
       }
 
-      .button {
-        display: inline-block;
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
-        background-color: #333;
-        color: #fff;
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
         border-radius: 3px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        cursor: pointer;
+        resize: none;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
       }
 
-      .button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-left: 451px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      .footer {
+        background-color: #282a36;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
       }
     </style>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
   </head>
   <body>
-    <div class="circle"></div>
-    <h1>Welcome to My Website</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra eros
-      sed lorem convallis, ac commodo eros euismod. Praesent ac aliquet quam.
-    </p>
-    <a href="#" class="button">View Projects</a>
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="projectPage.html">Projects</a>
+      <div class="button-right">
+        <a href="#" class="active">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <form
+        action="mailto:kglezerjones@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="10"
+          cols="50"
+          required
+        ></textarea>
+        <input type="submit" value="Send" />
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-URL/">LinkedIn</a>
+        <a href="https://github.com/YOUR-GITHUB-USERNAME">GitHub</a>
+        <a href="mailto:YOUR-EMAIL-ADDRESS">Email</a>
+      </div>
+    </footer>
   </body>
 </html>
