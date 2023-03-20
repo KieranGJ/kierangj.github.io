@@ -92,17 +92,17 @@
         background-color: #4CAF50;
         color: #FFFFFF;
         border-radius: 5px;
-        border: 30px;
+        border: none;
         border-color: #FFFFFF;
         cursor: pointer;
-        box-shadow: 0 0 10px #ccc;
+        box-shadow: none;
         transition: background-color 0.3s;
         background-color: rgb(40, 42, 54);
       }
 
       /* Style the hover effect */
       .button:hover {
-        background-color: #3e8e41;
+        background-color: lightblue;
       }
 
       /* Center the buttons */
@@ -127,7 +127,7 @@
     </div>
     <div class="bigContainerLeft">
       <div class="container">
-        <h1>Send Me an Email</h1>
+        <h1>Send an Email To: kglezerjones@gmail.com</h1>
         <form
           action="mailto:kglezerjones@gmail.com"
           method="post"
@@ -153,9 +153,30 @@
     <div class="bigContainerRight">
       <div class="container">
         <div class="button-container">
-          <a href="https://www.google.com" class="button">Button 1</a>
-          <a href="https://www.facebook.com" class="button">Button 2</a>
-          <a href="https://www.twitter.com" class="button">Button 3</a>
+          <a href="https://www.linkedin.com/in/kieranglezerjones" class="button">Visit Linkedin</a>
+          <a href="https://github.com/kierangj" class="button">Visit Github</a>
+          <a onclick="copyToClipboard('kglezerjones@gmail.com')" class="button">Copy Email</a>
+
+
+          <script>
+            function copyToClipboard(text) {
+              // create a temporary textarea element to hold the text
+              const textarea = document.createElement('textarea');
+              textarea.value = text;
+              document.body.appendChild(textarea);
+      
+              // select and copy the text
+              textarea.select();
+              document.execCommand('copy');
+      
+              // remove the textarea from the DOM
+              document.body.removeChild(textarea);
+      
+              // display an alert message confirming the email was copied
+              alert('Email copied to clipboard: ' + text);
+            }
+          </script>
+
         </div>
       </div>
   </body>
