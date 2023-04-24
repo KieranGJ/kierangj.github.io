@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skill Set</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: auto;
+        display: flex;      
+        background-color: rgb(40, 42, 54);
+      }
+      
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #1c1e26;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .wordStyle{
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 50px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: uppercase;
+      }
+      .standardText{
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 25px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #FFFFFF;
+        font-weight: 400;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+      }
+      .aboutMeContainer{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .wordStyle .standardText{
+        width: 100%;
+        display: block;
+        
+      }
+      .listContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .list {
+        width: 45%;
+        margin: 0 10px;
+      }
+      
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      li {
+        margin-bottom: 5px;
+      }
+      
+      li:before {
+        content: "\2022";
+        margin-right: 5px;
+        color: #007bff;
+      }
+      .tag {
+			display: inline-block;
+			background-color: green;
+			color: white;
+			padding: 5px;
+			margin: 5px;
+			border-radius: 5px;
+			font-size: 25px;
+			font-weight: bold;
+		}
+    </style>
+  </head>
+  <link rel="icon" href="../Images/webpageIcon.png" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <body>
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="#" class="active">Skill Set</a>
+      <a href="about.html">Resume</a>
+      <a href="projectPage.html">Projects</a>
+      <div class="button-right">
+        <a href="Contact.html">Contact Me</a>
+      </div>
+      </div>
+    </div>
+    <div class="aboutMeContainer">
+    <div class = "wordStyle" style = "padding-top: 70px;">
+        <hr style="color: #FFFFFF;">
+        About Me
+        <hr style="color: #FFFFFF;">
+    </div>
+    <div class = "standardText">
+        <p>I recently graduated top of my class for an <b>Honours level certificate in Data Science, Analytics and Machine Learning.</b> I am young and passionate about everything to do with data, from wrangling it to interpreting it. <br>Before acquiring my NQF level 8 certificate, I gained my NQF level 7 bachelors degree in Software development where I graduated with Distinction. Because of this I am fully capable of slipping into a wide varienty data related roles, such as data analytics and machine learning as well as having a firm understanding of what happens behind the scenes from a application development perspective. It also means I am used to handling data both from a analytical standpoint and a collection and utilization standpoint.</p>
+        <p>Under the projects tab of this website you will be able to view many of my projects which I submitted for my NQF 8 certificate. These projects demonstrate my ability to not only go beyond what was expected of me but also find patterns which might not have been spotted yet. Additionally I utilize many best practises to create impressive machine learning feats while taking the information decoded from the analytical process to achieve impressive accuracy.</p>
+        <p>The skill that truly set me apart from my peers, however, was my analytical mindset which allowed me to not only see the data infront of me, but also interpret how external factors were possibly impacting the data. I was constantly thinking outside the box and challenging the requirements in pursuit of a more appropriate method. </p>
+        <p>Although I may not always have the desired work experience on paper, I assure you that I am capable of outperforming many mid level data scientists. I developed numerous projects from start to finish as a fullstack data scientist and developer and from my education I have gained the ability to effortlessly compete with the industry standard while maintaining best practice and scalability. Given the chance I know I can impress you.</p>
+        <p>I also invested in an inverter to make sure my workstation has no downtime and I am always connected to the internet, even during loadshedding.</p>
+    </div>
+        <div class = "wordStyle" style = "padding-top: 70px;">
+            <hr style="color: #FFFFFF;">
+            Data Science Skill Set
+            <hr style="color: #FFFFFF;">
+        </div>
+        <div class = "standardText">
+           <p>I am extremely comfortable with not only a wide vareity of Machine learning models, but also with creating and maintaining advanced neural networks. The machine learning and neural network models I have experience working with are as follows:</p>
+           
+           <div class="listContainer">
+            <div class="list">
+                <h2>Machine Learning Models </h2>
+           <ul>
+            <li>Naive Bayes</li>
+            <li>Decision Tree</li>
+            <li>Linear Regression</li>
+            <li>Logistic Regression</li>
+            <li>K-Nearest Neighbours</li>
+            <li>Random Forest Regression</li>
+            <li>Random Forest Classification</li>
+            <li>Support Vector Machines (SVR and SVC)</li>
+           </ul>
+        </div>
+        <div class="list">
+            <h2>Neural Network Models</h2>
+           <ul>
+            <li>Gated Recurrent Unit</li>
+            <li>Recurrent Neural Networks</li>
+            <li>Convolutional Neural Networks</li>          
+            <li>Long Short Term Memory Networks</li>
+           </ul>
+        </div>
+        </div>
+        <p>Alongside these models I am also very capable of wrangling data. By utilizing my expertise in Python I can clean data and transform it into a state that makes it much easier for both humans and machines to interpret respectfully. I mostly make use of Jupyter notebook to experiment and see exactly which of the above models will produce the finest results. When I research new concepts I make a point of going extremely in depth, and as a result I have a great understanding of how each of the above models works behind the scenes. This knowledge aids me in selecting which models work best for which scenerio given critera such as desired performance, accuracy and size as well as how much data is on hand.</p>
+        <p>I am also very experienced when it comes to the creation of data pipelines. I have made many in the past and understand their usefulnes and importance.</p>
+        </div>
+
+        <div class = "wordStyle" style = "padding-top: 70px;">
+            <hr style="color: #FFFFFF;">
+            Data Analytics Skill Set
+            <hr style="color: #FFFFFF;">
+        </div>
+        <div class = "standardText">
+            <p>Data analytics is one of my strongest skills as I find myself constantly thinking outside the box and finding correlations between variables that might not even be in the same dataset. This ability is something I believe I could utilize in a business to gain immense amounts of value where I believe others may not. Alternately I am comfortable with the four major types of data analytics.</p>
+            <p><b><u>Descriptive analytics</u></b> allows me to take data from a dataset and tell you exactly what it says. For a business this means I can see what items are selling well over time or which ones need some work.</p>
+            <p><b><u>Diagnostic analysis</u></b> allows me to go a step further and figure out why certain things are happening. For a business this means that I can figure out why certain items are selling while others are not.</p>
+            <p><b><u>Predictive analysis</u></b> makes use of my data science background to predict future trends utilizing either business knowledge or machine learning. For a business this means I can tell you if an item will sell well before it has even lauched.</p>
+            <p><b><u>Prescriptive analysis</u></b> is arguably the hardest but most valuable of the four. It makes use of my critical thinking skills to take the information gained from the previous three techniques and come up with a strategy involving what the next best course of action would be.</p>
+            <p>When it comes to communicating data I am more than capable of utilizing tools such as <b><u>Microsoft Power BI</u></b> or <b><u>Python</u></b> to visualise the data appropriately so everyone can understand. I am also used to writing lengthy reports which document each and every decision I make and why I make them.</p>
+        </div>
+        <div class = "wordStyle" style = "padding-top: 70px;">
+            <hr style="color: #FFFFFF;">
+            Software Development Skill Set
+            <hr style="color: #FFFFFF;">
+        </div>
+        <div class = "standardText">
+            <p>My Software Development background tends to help immensely when it comes to performing both data anayltics and science. I am constantly thinking of best practise and how my creations will fit into current design patterns. I also have a great understanding of the data collection process which might help me identify any flaws that could obscure my analysis. My experience designing, setting up and working with databases allows me to effortlessly use SQL to query them for the exact data I need. I am comfortable with a wide variety of languages and software such as:</p>
+            <div class="listContainer">
+                <div class="list">
+                    <h2>Software</h2>
+                   <ul>
+                    <li>Apache Spark</li>   
+                    <li>Android Studio</li>  
+                    <li>Apache Hadoop</li>                                  
+                    <li>Microsoft Azure</li>              
+                    <li>Microsoft Office</li> 
+                    <li>Apache NetBeans</li>           
+                    <li>Jupyter Notebook</li>
+                    <li>Microsoft Power BI</li>
+                    <li>Visual Studio Code</li>                  
+                    <li>Microsoft SQL Server</li>
+                    <li>Microsoft Visual Studio</li>                            
+                   </ul>
+                </div>
+                <div class="list">
+                    <h2>Languages or concepts</h2>
+               <ul>
+                <li>C#</li>
+                <li>SQL</li>
+                <li>CSS</li>
+                
+                <li>Java</li>
+                <li>HTML</li>
+                <li>NoSQL</li>
+                <li>Python</li>     
+                <li>JavaScript</li>
+               </ul>
+            </div>
+            
+            </div>
+        </div>
+        <div class = "wordStyle" style = "padding-top: 70px;">
+            <hr style="color: #FFFFFF;">
+            Communication
+            <hr style="color: #FFFFFF;">
+        </div>
+        <div class = "standardText">
+            <p>During my time as tertiary education I took an applied communication course to make sure that I was also able to accurately and reliably convery the meaning of my words. This skill has stayed with me and proved invaluable when communicating my findings. I am a friendly extravert that loves meeting new people and making friends, but I also understand that there is a time and a place. </p>
+            <p>English is my home language and unfortunately the only one I am confident in saying I am fluent in.</p>
+        </div>
+        <div class = "wordStyle" style = "padding-top: 70px;">
+            <hr style="color: #FFFFFF;">
+            TAGS
+            <hr style="color: #FFFFFF;">
+        </div>
+        <div id="tagsContainer" style="padding-bottom: 50px;">
+            <div class="tag">Python</div>
+            <div class="tag">Data Science</div>
+            <div class="tag">Data Analytics</div>
+            <div class="tag">Microsoft Power BI</div>
+            <div class="tag">Machine Learning</div>
+            <div class="tag">SQL</div>
+            <div class="tag">Java</div>
+            <div class="tag">Jupyter Notebook</div>
+            <div class="tag">Descriptive Analytics</div>
+            <div class="tag">Diagnostic Analytics</div>
+            <div class="tag">Predictive Analytics</div>
+            <div class="tag">Prescriptive Analytics</div>
+            <div class="tag">Communication</div>
+            <div class="tag">Data Pipelines</div>
+            <div class="tag">Data Collection</div>
+            <div class="tag">Data Visualisation</div>
+            <div class="tag">Data Warehousing</div>
+            <div class="tag">Data Modelling</div>
+            <div class="tag">Data Cleansing</div>
+            <div class="tag">Data Integration</div>
+            <div class="tag">Data Architecture</div>
+            <div class="tag">C#</div>
+            <div class="tag">Software Development</div>
+            <div class="tag">Android Studio</div>
+            <!-- Add more tags here -->
+        </div>
+    </div>
+  </body>
+</html>
