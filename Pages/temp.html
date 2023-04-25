@@ -1,26 +1,303 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Green Tags</title>
-	<style>
-		.tag {
-			display: inline-block;
-			background-color: green;
-			color: white;
-			padding: 5px;
-			margin: 5px;
-			border-radius: 5px;
-			font-size: 16px;
-			font-weight: bold;
-		}
-	</style>
-</head>
-<body>
-	<div id="tagsContainer">
-		<div class="tag">Tag 1</div>
-		<div class="tag">Tag 2</div>
-		<div class="tag">Tag 3</div>
-		<!-- Add more tags here -->
-	</div>
-</body>
+  <head>
+    <title>Skill Set</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+css
+Copy code
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .navbar a.active {
+    border-bottom: 2px solid #fff;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 100px 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .list {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  li:before {
+    content: "\2022";
+    margin-right: 10px;
+    color: #007bff;
+  }
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+</style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="#" class="active">Skill Set</a>
+      <a href="about.html">Resume</a>
+      <a href="projectPage.html">Projects</a>
+      <a href="Contact.html">Contact Me</a>
+    </div>
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="text">
+        <p>
+          I recently graduated top of my class for an <b>Honours level certificate in Data Science, Analytics and Machine Learning.</b> I am young and passionate about using my skills to help organizations solve complex problems and improve decision-making processes. My background in computer science, coupled with my strong analytical and problem-solving abilities, make me an excellent candidate for roles in data science, machine learning, and artificial intelligence.
+    </p>
+    <p>
+      I enjoy taking on challenging projects and am constantly learning and updating my skill set to stay current with the latest trends and technologies in the field. I am a strong believer in teamwork and collaboration, and I am confident in my ability to communicate effectively with both technical and non-technical stakeholders.
+    </p>
+  </div>
+  <h2 class="section-title">Skills</h2>
+  <div class="list-container">
+    <div class="list">
+      <h3 class="section-subtitle">Programming Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>R</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div class="list">
+      <h3 class="section-subtitle">Frameworks & Libraries</h3>
+      <ul>
+        <li>TensorFlow</li>
+        <li>PyTorch</li>
+        <li>Scikit-Learn</li>
+        <li>Pandas</li>
+        <li>NumPy</li>
+      </ul>
+    </div>
+  </div>
+  <div class="list-container">
+    <div class="list">
+      <h3 class="section-subtitle">Data Visualization</h3>
+      <ul>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly</li>
+        <li>Tableau</li>
+      </ul>
+    </div>
+    <div class="list">
+      <h3 class="section-subtitle">Databases & Big Data</h3>
+      <ul>
+        <li>SQL</li>
+        <li>NoSQL</li>
+        <li>Hadoop</li>
+        <li>Spark</li>
+      </ul>
+    </div>
+  </div>
+  <h2 class="section-title">Specializations</h2>
+  <div class="tag-container">
+    <span class="tag">Machine Learning</span>
+    <span class="tag">Deep Learning</span>
+    <span class="tag">Natural Language Processing</span>
+    <span class="tag">Computer Vision</span>
+    <span class="tag">Reinforcement Learning</span>
+    <span class="tag">Time Series Analysis</span>
+    <span class="tag">Predictive Modeling</span>
+    <span class="tag">Statistical Analysis</span>
+  </div>
+</div>
+  </body>
+</html>
+  <body>
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="education-container">
+        <div class="education-item">
+          <h3 class="section-subtitle">Master's in Computer Science, Specialization in Data Science</h3>
+          <p>
+            XYZ University - City, Country<br>
+            August 2021 - June 2023
+          </p>
+          <p>
+            Relevant coursework: Machine Learning, Deep Learning, Natural Language Processing, Big Data Analytics, Data Visualization, Statistical Analysis.
+          </p>
+        </div>
+        <div class="education-item">
+          <h3 class="section-subtitle">Bachelor of Science in Computer Science</h3>
+          <p>
+            ABC University - City, Country<br>
+            September 2017 - May 2021
+          </p>
+        </div>
+      </div>
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-container">
+        <div class="experience-item">
+          <h3 class="section-subtitle">Data Scientist Intern</h3>
+          <p>
+            Tech Company - City, Country<br>
+            June 2022 - August 2022
+          </p>
+          <ul>
+            <li>Developed machine learning models to predict customer churn, leading to a 5% reduction in churn rate</li>
+            <li>Implemented natural language processing techniques to analyze customer feedback and identify areas for improvement</li>
+            <li>Presented findings to the management team, leading to changes in customer service strategies</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3 class="section-subtitle">Software Engineering Intern</h3>
+          <p>
+            Another Tech Company - City, Country<br>
+            May 2021 - August 2021
+          </p>
+          <ul>
+            <li>Collaborated with a team of software engineers to develop a web application using Java and JavaScript</li>
+            <li>Contributed to front-end and back-end development, implementing features and fixing bugs</li>
+            <li>Participated in Agile development processes, attending daily standups and sprint planning sessions</li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-container">
+        <div class="project-item">
+          <h3 class="section-subtitle">Sentiment Analysis using Deep Learning</h3>
+          <p>
+            Implemented a deep learning model to analyze the sentiment of movie reviews using natural language processing techniques. Achieved a 90% accuracy rate in classifying reviews as positive or negative.
+          </p>
+        </div>
+        <div class="project-item">
+          <h3 class="section-subtitle">Object Detection in Images</h3>
+          <p>
+            Developed a computer vision model for detecting and classifying objects in images using convolutional neural networks. The model achieved an average precision of 85% across multiple object classes.
+          </p>
+        </div>
+      </div>
+      <h2 class="section-title">Certifications</h2>
+      <div class="certifications-container">
+        <div class="certification-item">
+          <h3 class="section-subtitle">Data Science and Machine Learning Bootcamp</h3>
+          <p>
+            Online Course Provider - Date Completed
+          </p>
+        </div>
+        <div class="certification-item">
+          <h3 class="section-subtitle">Deep Learning Specialization</h3>
+      <p>
+        Online Course Provider - Date Completed
+      </p>
+    </div>
+  </div>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-container">
+    <ul>
+      <li>Python, R, Java, JavaScript</li>
+      <li>Machine Learning (Scikit-learn, TensorFlow, Keras)</li>
+      <li>Natural Language Processing (NLTK, Gensim, SpaCy)</li>
+      <li>Data Visualization (Matplotlib, Seaborn, ggplot2)</li>
+      <li>Big Data (Hadoop, Spark, Hive)</li>
+      <li>Database Management (SQL, NoSQL, MongoDB)</li>
+      <li>Web Development (HTML, CSS, JavaScript, Flask, Django)</li>
+      <li>Version Control (Git, GitHub)</li>
+    </ul>
+  </div>
+  <h2 class="section-title">Languages</h2>
+  <div class="languages-container">
+    <ul>
+      <li>English (Fluent)</li>
+      <li>Spanish (Conversational)</li>
+      <li>German (Beginner)</li>
+    </ul>
+  </div>
+  <h2 class="section-title">Hobbies & Interests</h2>
+  <div class="hobbies-container">
+    <p>
+      Traveling, photography, hiking, reading, programming competitions, hackathons, volunteering in community outreach programs, playing chess.
+    </p>
+  </div>
+</div>
+  </body>
 </html>
