@@ -14608,7 +14608,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><p>Mean Absolute Percentage Error (MAPE): MAPE is similar to SMAPE, but it can be asymmetrical, penalizing under- or over-forecasts differently. It depends on the distribution of the actual values and can be sensitive to extreme values.</p>
 </li>
 </ul>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -14723,7 +14722,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </pre></div>
 </li>
 </ul>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -14739,7 +14737,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14747,7 +14745,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ignoreWarnings</span><span class="p">():</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">ignoreWarnings</span><span class="p">()</span>
+<span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">--------------------------------------------------------</span>
 <span class="sd">REGRESSION MODELS</span>
 <span class="sd">--------------------------------------------------------</span>
@@ -14847,42 +14848,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">import</span> <span class="nn">optuna</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">r2_score</span>
-
-<span class="k">def</span> <span class="nf">ignoreWarnings</span><span class="p">():</span>
-    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-
 <span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
-
-<span class="n">ignoreWarnings</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>c:\Users\kglez\AppData\Local\Programs\Python\Python310\lib\site-packages\xgboost\compat.py:36: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
-  from pandas import MultiIndex, Int64Index
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -14936,7 +14907,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h3 align="left"><font color="#ffffff">📚 By the Books
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's check to see if there are any null values</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -15439,7 +15409,6 @@ dtype: int64
 <p>There are no missing values in the training or testing dataset so we can then check to see which columns are missing from the training set
 <br><br>
 These will be our targets.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -15511,7 +15480,6 @@ These will be our targets.</p>
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>This is a very small dataset so we can rule out deep learning.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -15894,7 +15862,6 @@ ISSUES:</p>
 The model will assume an order to these even though they are not ordinal.
 <br>It will be important to somehow deal when this without going crazy with dummy values.
 <br>Although some tree-based and gradient-boosted tree-based models can handle high dimensionality others cannot.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -15985,7 +15952,6 @@ memory usage: 475.2 KB
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Cab and FrontSusp are objects in the testing data but ints in the training data.
 <br>This implies that the testing data might be dirty or hold values that do not exist in the training data.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -16067,7 +16033,6 @@ memory usage: 475.2 KB
 <br>When we encode the category variables I will use</p>
 <p><hr>TargetEncoder(handle_unknown='value', handle_missing='value')<hr>
 <br>This will ensure that when new values it does not recognise are added it will convert them to -1 or the average</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -16128,7 +16093,6 @@ Length: 9, dtype: string</pre>
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>There seem to be some '.' in the data, these appear to be mistakes so we will quickly get rid of them.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -16197,7 +16161,6 @@ Length: 6, dtype: string</pre>
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
 <p>All anomalies have been dealt with. 
 <br>Let's continue looking at the data</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -16361,7 +16324,6 @@ Length: 6, dtype: string</pre>
 <p>3 million seems a bit excessive for an overhang
 <br><hr>
 It is obviously an outlier so let's see if the testing data shares the same fate.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -16535,7 +16497,6 @@ jp-needs-light-background
 <p>The testing data also has the large outlier.
 <br>This means this might be a common occurence in the data.
 <br>So instead of dropping these outliers, let's rather convert them to the average (That is present without the outliers) which is 90</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -17454,7 +17415,6 @@ jp-needs-light-background
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
 <p>The data is looking much better.
 <br>But we will need to keep in mind that we want to deal with the outliers in the testing data at some point.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -17555,7 +17515,6 @@ memory usage: 475.2 KB
 <h3 align="left"><font color="#ffffff">📚 By the Books
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's check the correlations between the numeric features and the target variables.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -17635,7 +17594,6 @@ class="
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
 <p>We see a slight positive correlation between Back and total from overhang, but no variables stand out as heroes.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -17652,7 +17610,6 @@ class="
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's check for Heteroskedasticity</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -17786,8 +17743,7 @@ Reject the null hypothesis: Evidence of heteroskedasticity.
 <p><hr>
 When using "Overhang" to predict "ActualWeightTotal", the model's errors seem to have a constant variance, which is a good thing. It means the model is probably well-specified for this relationship, at least in terms of the assumption of homoskedasticity (constant variance of errors).</p>
 <p>However, when "Overhang" is used to predict either "ActualWeightFront" or "ActualWeightBack", there is evidence that the variance of the model's errors is not constant. This can be problematic as it can lead to unreliable significance tests and confidence intervals.</p>
-<p><hr>Applying a log function actually made it perform slightly worse<hr>
-&lt;/font&gt;</p>
+<p><hr>Applying a log function actually made it perform slightly worse<hr></p>
 
 </div>
 </div>
@@ -17910,8 +17866,7 @@ class="
 
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
-<p>All three features seem to show decent grouping within the data.
-&lt;/font&gt;</p>
+<p>All three features seem to show decent grouping within the data.</p>
 
 </div>
 </div>
@@ -17939,7 +17894,6 @@ class="
 <h3 align="left"><font color="#ffffff">📚 By the Book
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's define our X and y value</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -18283,7 +18237,6 @@ class="
 <h3 align="left"><font color="#ffffff">📚 By the Book
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's define a pipeline to process the data</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -18683,7 +18636,6 @@ class="
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's see if we can get a good idea of how many estimators we should use as a reference.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -18760,7 +18712,6 @@ class="
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
 <p>When testing estimators let's use 30 as a point of reference.</p>
 <p><hr>Using this information let's try and get an idea of which models will work really well with this data.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -19960,7 +19911,7 @@ We only need to predict the two best outputs, and then we can infer the third.
 <br><br>Although the R2 score is very similar between the Back and Total, the SMAPE score for the Total is much better.
 <br><br>Therefore we will try use the random forest for the front and XGBoost for the total.
 
-</font></div>
+</div>
 </div>
 </div>
 </div>
@@ -20017,7 +19968,6 @@ We only need to predict the two best outputs, and then we can infer the third.
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's get a baseline for how well our model is performing.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -20077,7 +20027,6 @@ MAE score: 128.65457928631758
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's start by making as many features as we can think of, then then start reducing them until we get the perfect score.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -20203,7 +20152,6 @@ MAE score: 128.65457928631758
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>All the features where graphed to help find the most useful ones.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -20691,7 +20639,6 @@ class="
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Features where filtered out based on an arbitrary number I fiddled with until I got the best results</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -20773,8 +20720,7 @@ Mean: 128.9186301731419
 
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
-<p>AWe see a decent difference with the new and improved features.</p>
-<p>&lt;/font&gt;</p>
+<p>We see a decent difference with the new and improved features.</p>
 
 </div>
 </div>
@@ -20839,8 +20785,7 @@ Mean: 128.9186301731419
 
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
-<p>There where deemed the important features</p>
-<p>&lt;/font&gt;</p>
+<p>These were deemed the important features</p>
 
 </div>
 </div>
@@ -21197,7 +21142,6 @@ Mean: 128.9186301731419
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
 <p>Let's being optimizing the hyperparameters.
 <br>We will use optuna to make this process really easy and reliable.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -21411,9 +21355,6 @@ Best Score (MAE): 124.80943010075566
 <p><hr>
 {'n_estimators': 495, 'learning_rate': 0.133354970082411, 'max_depth': 7, 'reg_lambda': 4.53385562551496e-08, 'subsample': 0.8141582328181602, 'colsample_bytree': 0.7732232759096854, 'gamma': 0.34364076800046645, 'min_child_weight': 1}</p>
 <hr>
-
-<p>&lt;/font&gt;</p>
-
 </div>
 </div>
 </div>
@@ -21440,7 +21381,6 @@ Best Score (MAE): 124.80943010075566
 <h3 align="left"><font color="#ffffff">🧠 A good idea
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif;"></p>
 <p>Let's get a baseline for how well our model is performing.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
@@ -21920,7 +21860,6 @@ Mean: 292.3422946579392
 <h3 align="left"><font color="#ffffff">💡 Findings
 </font></h3><p><font color="#ffffff" style="font-family: Verdana, Geneva, sans-serif; line-height: 1.6;"></p>
 <p>I was unsuccessful in creating a useful combination of features, adding extra dimensions didn't help the model and reducing existing dimensions didn't help either.</p>
-<p>&lt;/font&gt;</p>
 
 </div>
 </div>
