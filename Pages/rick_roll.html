@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Be My Valentine? 💝</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6e6;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .proposal {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        .reasons {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+            display: none;
+        }
+
+        .reason {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: #ff4d4d;
+            opacity: 0;
+        }
+
+        .celebration-image {
+            display: none;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts"></div>
+    <div class="container">
+        <h1>🌹 Will You Be My Valentine? 🌹</h1>
+        
+        <div class="proposal">
+            Hey! Before you answer, let me tell you why you should say yes...
+        </div>
+
+        <div class="reasons">
+            <div class="reason">❤️ You can call me pooky... once and only once</div>
+            <div class="reason">🍣 I like you more than salmon and trout</div>
+            <div class="reason">🌟 You're the CSS to my HTML - without you, I'm just structurally sound but totally plain!</div>
+            <div class="reason">🎵 I'll put the volumne of 22</div>
+            <div class="reason">📖 I promise I will get better at spelling</div>
+            <div class="reason">🪨 I promise to carry you in elite deep archameaodsadasd</div>
+            <div class="reason">💢 I promise I will work on my anger issues</div>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn yes-btn" onclick="sayYes()">Yes! 💖</button>
+            <button class="btn no-btn" onmouseover="escapeNo()">No 💔</button>
+        </div>
+
+        <img src="https://media.giphy.com/media/Xw6yFn7frR3Y4/giphy.gif?cid=790b7611tqdmfo165ep8g0dvsvguszcf8j28ncz324u1xq9b&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Celebration" class="celebration-image" />
+
+    </div>
+
+    <script>
+        let noCount = 0;
+        const reasons = document.querySelector('.reasons');
+        const hearts = document.querySelector('.hearts');
+
+        // Show reasons with animation
+        setTimeout(() => {
+            reasons.style.display = 'block';
+            gsap.from('.reason', {
+                y: 50,
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.2
+            });
+        }, 1000);
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            hearts.appendChild(heart);
+
+            gsap.to(heart, {
+                y: -window.innerHeight * 1.5,
+                x: 'random(-100, 100)',
+                rotation: 'random(-90, 90)',
+                opacity: 1,
+                duration: 'random(3, 6)',
+                ease: 'power1.out',
+                onComplete: () => hearts.removeChild(heart)
+            });
+        }
+
+        function escapeNo() {
+            const btn = document.querySelector('.no-btn');
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+
+            // Move button to random position within container
+            const newX = Math.random() * (containerRect.width - btn.offsetWidth);
+            const newY = Math.random() * (containerRect.height - btn.offsetHeight);
+
+            btn.style.position = 'absolute';
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+
+            // Change button text based on attempts
+            noCount++;
+            const phrases = [
+                "Try again! 😏",
+                "Are you sure? 🥺",
+                "Really sure? 😢",
+                "Think again! 💭",
+                "Last chance! 🎯",
+                "Surely not! 😅",
+                "You're breaking my heart! 💔",
+                "I'm running out of phrases! 😂",
+                "Getting tired yet? 😴",
+                "Still no? 🤔"
+            ];
+            
+            if (noCount <= phrases.length) {
+                btn.textContent = phrases[noCount - 1];
+            }
+        }
+
+        function sayYes() {
+            // Hide the no button
+            document.querySelector('.no-btn').style.display = 'none';
+            
+            // Change the proposal text
+            document.querySelector('.proposal').innerHTML = "YAYYY! You've made me the happiest person ever! 🎉";
+            
+            // Show and animate the celebration image
+            const celebrationImage = document.querySelector('.celebration-image');
+            celebrationImage.style.display = 'block';
+            gsap.from(celebrationImage, {
+                y: 50,
+                opacity: 0,
+                duration: 0.5,
+                ease: 'back.out'
+            });
+            
+            // Add the surprise reason
+            const newReason = document.createElement('div');
+            newReason.className = 'reason';
+            newReason.innerHTML = '💰 By pressing yes you give me full rights to your feet, including the ability to, without consent, take a picture of them and sell them for trout money.';
+            reasons.appendChild(newReason);
+            
+            // Animate the new reason
+            gsap.from(newReason, {
+                y: 50,
+                opacity: 0,
+                duration: 0.5,
+                ease: 'back.out'
+            });
+            
+            // Create celebration hearts
+            for (let i = 0; i < 50; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+
+            // Make the yes button bounce
+            gsap.to('.yes-btn', {
+                scale: 1.2,
+                duration: 0.2,
+                yoyo: true,
+                repeat: 5
+            });
+        }
+
+        // Create floating hearts periodically
+        setInterval(createHeart, 2000);
+    </script>
+</body>
+</html>
